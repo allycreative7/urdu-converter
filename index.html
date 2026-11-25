@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InPage to Unicode Urdu Converter Online Free | اردو کنورٹر</title>
+  <meta name="description" content="Convert InPage Urdu text to Unicode and Unicode to InPage instantly online for free. Fast, mobile-friendly Urdu text converter with one-click copy and download." />
+  <meta name="keywords" content="InPage to Unicode, Unicode to InPage, Urdu Unicode Converter, Mbilal Urdu converter alternative, اردو یونیکوڈ کنورٹر" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "How do I convert InPage text to Unicode Urdu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Copy your Urdu text from InPage, paste it into the InPage input box on this page, and your Unicode Urdu text will appear automatically ready to copy."
+      }
+    }, {
+      "@type": "Question",
+      "name": "Can I convert Unicode Urdu back to InPage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, click the 'Unicode -> InPage' mode button, paste your Unicode Urdu text, and copy the converted output directly into InPage."
+      }
+    }]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-hover: #115e59;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    header h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    header p { font-size: 0.95rem; opacity: 0.9; }
+    .urdu-title {
+      font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Urdu Typesetting', Tahoma, serif;
+      font-size: 1.35rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .mode-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .mode-btn {
+      padding: 0.65rem 1.25rem;
+      border: 2px solid var(--primary);
+      background: #fff;
+      color: var(--primary);
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .mode-btn.active, .mode-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    .box-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+    }
+    .box-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    textarea {
+      width: 100%;
+      height: 260px;
+      padding: 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 1.15rem;
+      resize: vertical;
+      outline: none;
+    }
+    textarea:focus { border-color: var(--primary); }
+    .urdu-font {
+      font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Urdu Typesetting', Tahoma, serif;
+      line-height: 2.2;
+      font-size: 1.35rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+    .btn {
+      padding: 0.5rem 0.9rem;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      background: #e2e8f0;
+      color: var(--text);
+      transition: 0.2s;
+    }
+    .btn:hover { background: #cbd5e1; }
+    .btn-primary { background: var(--primary); color: #fff; }
+    .btn-primary:hover { background: var(--primary-hover); }
+
+    .stats {
+      margin-top: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      display: flex;
+      gap: 1rem;
+    }
+
+    .seo-section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    .seo-section h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--primary); }
+    .seo-section h3 { font-size: 1.05rem; margin: 1rem 0 0.35rem; }
+    .seo-section p { color: #334155; font-size: 0.95rem; }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Urdu Unicode &amp; InPage Converter</h1>
+  <p class="urdu-title">ان پیج سے یونیکوڈ اور یونیکوڈ سے ان پیج اردو کنورٹر</p>
+</header>
+
+<div class="container">
+  <div class="mode-bar">
+    <button class="mode-btn active" id="btnInpageToUni" onclick="setMode('inpageToUni')">InPage &rarr; Unicode</button>
+    <button class="mode-btn" id="btnUniToInpage" onclick="setMode('uniToInpage')">Unicode &rarr; InPage</button>
+  </div>
+
+  <div class="grid">
+    <div class="box-card">
+      <div class="box-header">
+        <span id="inputLabel">Paste InPage Text Here:</span>
+        <button class="btn" onclick="clearAll()">Clear</button>
+      </div>
+      <textarea id="inputText" placeholder="Paste your text here..." oninput="convertText()"></textarea>
+      <div class="actions">
+        <button class="btn" onclick="cleanSpaces()">Fix Extra Spaces</button>
+        <button class="btn" onclick="convertDigits()">123 &rarr; ۱۲۳</button>
+      </div>
+      <div class="stats" id="inputStats">Words: 0 | Characters: 0</div>
+    </div>
+
+    <div class="box-card">
+      <div class="box-header">
+        <span id="outputLabel">Converted Unicode Urdu:</span>
+        <span id="copyStatus" style="color: var(--primary); font-size: 0.85rem;"></span>
+      </div>
+      <textarea id="outputText" class="urdu-font" dir="rtl" readonly placeholder="تبدیل شدہ اردو متن یہاں ظاہر ہوگا..."></textarea>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="copyOutput()">Copy Text</button>
+        <button class="btn" onclick="downloadTxt()">Download .TXT</button>
+      </div>
+      <div class="stats" id="outputStats">Words: 0 | Characters: 0</div>
+    </div>
+  </div>
+
+  <section class="seo-section">
+    <h2>Fast &amp; Free InPage to Unicode Urdu Converter</h2>
+    <p>This online tool converts proprietary InPage Urdu text into standard UTF-8 Unicode Urdu for websites, Facebook, WhatsApp, YouTube thumbnails, and MS Word—and converts Unicode Urdu back into InPage format instantly in your browser.</p>
+
+    <h3>How to Convert InPage Text to Unicode?</h3>
+    <p>Open your file in InPage, select the text using Ctrl+A, copy it with Ctrl+C, and paste it into the left box above. Your clean Unicode Urdu text will appear immediately in Nastaliq font.</p>
+
+    <h3>Why Use This Converter?</h3>
+    <p>Unlike older converters, this tool runs 100% locally in your browser with zero page reloads, works smoothly on mobile phones, and includes built-in space cleaning and Urdu numeral conversion.</p>
+  </section>
+</div>
+
+<footer>
+  &copy; 2026 Urdu Unicode Converter Tool. Free Online Utility.
+</footer>
+
+<script>
+  let currentMode = 'inpageToUni';
+
+  const inpageToUnicodeMap = {
+    '\u0081': 'ا', '\u0082': 'ب', '\u0083': 'پ', '\u0084': 'ت', '\u0085': 'ٹ',
+    '\u0086': 'ث', '\u0087': 'ج', '\u0088': 'چ', '\u0089': 'ح', '\u008A': 'خ',
+    '\u008B': 'د', '\u008C': 'ڈ', '\u008D': 'ذ', '\u008E': 'ر', '\u008F': 'ڑ',
+    '\u0090': 'ز', '\u0091': 'ژ', '\u0092': 'س', '\u0093': 'ش', '\u0094': 'ص',
+    '\u0095': 'ض', '\u0096': 'ط', '\u0097': 'ظ', '\u0098': 'ع', '\u0099': 'غ',
+    '\u009A': 'ف', '\u009B': 'ق', '\u009C': 'ک', '\u009D': 'گ', '\u009E': 'ل',
+    '\u009F': 'م', '\u00A0': 'ن', '\u00A1': 'ں', '\u00A2': 'و', '\u00A3': 'ہ',
+    '\u00A4': 'ھ', '\u00A5': 'ء', '\u00A6': 'ی', '\u00A7': 'ے', '\u00A8': 'آ',
+    '\u00A9': 'ؤ', '\u00AA': 'ئ', '\u00AB': 'ۃ', '\u00AC': '۔', '\u00AD': '،',
+    '\u00AE': '؛', '\u00AF': '؟', '\u00B0': '۰', '\u00B1': '۱', '\u00B2': '۲',
+    '\u00B3': '۳', '\u00B4': '۴', '\u00B5': '۵', '\u00B6': '۶', '\u00B7': '۷',
+    '\u00B8': '۸', '\u00B9': '۹'
+  };
+
+  const unicodeToInpageMap = {};
+  for (const [k, v] of Object.entries(inpageToUnicodeMap)) {
+    unicodeToInpageMap[v] = k;
+  }
+
+  function setMode(mode) {
+    currentMode = mode;
+    document.getElementById('btnInpageToUni').classList.toggle('active', mode === 'inpageToUni');
+    document.getElementById('btnUniToInpage').classList.toggle('active', mode === 'uniToInpage');
+
+    const inputBox = document.getElementById('inputText');
+    const outputBox = document.getElementById('outputText');
+
+    if (mode === 'inpageToUni') {
+      document.getElementById('inputLabel').textContent = 'Paste InPage Text Here:';
+      document.getElementById('outputLabel').textContent = 'Converted Unicode Urdu:';
+      inputBox.classList.remove('urdu-font');
+      inputBox.dir = 'ltr';
+      outputBox.classList.add('urdu-font');
+      outputBox.dir = 'rtl';
+    } else {
+      document.getElementById('inputLabel').textContent = 'Paste Unicode Urdu Here:';
+      document.getElementById('outputLabel').textContent = 'Converted InPage Code:';
+      inputBox.classList.add('urdu-font');
+      inputBox.dir = 'rtl';
+      outputBox.classList.remove('urdu-font');
+      outputBox.dir = 'ltr';
+    }
+    convertText();
+  }
+
+  function convertText() {
+    const input = document.getElementById('inputText').value;
+    const map = currentMode === 'inpageToUni' ? inpageToUnicodeMap : unicodeToInpageMap;
+    let result = '';
+
+    for (let i = 0; i < input.length; i++) {
+      const ch = input[i];
+      result += map[ch] !== undefined ? map[ch] : ch;
+    }
+
+    document.getElementById('outputText').value = result;
+    updateStats(input, 'inputStats');
+    updateStats(result, 'outputStats');
+  }
+
+  function updateStats(text, elementId) {
+    const trimmed = text.trim();
+    const words = trimmed ? trimmed.split(/\s+/).length : 0;
+    document.getElementById(elementId).textContent = `Words: ${words} | Characters: ${text.length}`;
+  }
+
+  function cleanSpaces() {
+    const inputBox = document.getElementById('inputText');
+    inputBox.value = inputBox.value.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+    convertText();
+  }
+
+  function convertDigits() {
+    const urduDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    const inputBox = document.getElementById('inputText');
+    inputBox.value = inputBox.value.replace(/[0-9]/g, d => urduDigits[d]);
+    convertText();
+  }
+
+  function copyOutput() {
+    const output = document.getElementById('outputText');
+    if (!output.value) return;
+    navigator.clipboard.writeText(output.value);
+    const status = document.getElementById('copyStatus');
+    status.textContent = 'Copied!';
+    setTimeout(() => status.textContent = '', 2000);
+  }
+
+  function downloadTxt() {
+    const text = document.getElementById('outputText').value;
+    if (!text) return;
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'urdu-converted.txt';
+    a.click();
+  }
+
+  function clearAll() {
+    document.getElementById('inputText').value = '';
+    document.getElementById('outputText').value = '';
+    updateStats('', 'inputStats');
+    updateStats('', 'outputStats');
+  }
+</script>
+
+</body>
+</html>
