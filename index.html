@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InPage to Unicode Urdu Converter Online Free | اردو کنورٹر</title>
-  <meta name="description" content="Convert InPage Urdu text to Unicode and Unicode to InPage instantly online for free. Fast, mobile-friendly Urdu text converter with smart auto-detection, file upload, and one-click copy." />
+  <title>InPage to Unicode &amp; Unicode to InPage Urdu Converter | اردو کنورٹر</title>
+  <meta name="description" content="Convert InPage Urdu text to Unicode and Unicode Urdu to InPage instantly online for free. Fast, mobile-friendly Urdu converter with auto-detection, file upload, and one-click copy." />
   <meta name="keywords" content="InPage to Unicode, Unicode to InPage, Urdu Unicode Converter, Mbilal Urdu converter alternative, اردو یونیکوڈ کنورٹر" />
   <link rel="canonical" href="https://urdu-converter.pages.dev/" />
 
@@ -21,14 +21,14 @@
       "name": "How do I convert InPage text to Unicode Urdu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Copy your Urdu text from InPage, paste it into the converter box on urdu-converter.pages.dev, and your Unicode Urdu text will appear automatically ready to copy."
+        "text": "Copy your Urdu text from InPage, paste it into the input box, and our smart auto-detector converts it into Unicode Urdu immediately."
       }
     }, {
       "@type": "Question",
-      "name": "How do I paste converted Unicode Urdu back into InPage without errors?",
+      "name": "How do I convert Unicode Urdu back to InPage without question marks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Paste your Unicode Urdu text into the box, ensure your Windows keyboard language is set to English (ENG), click Copy Text, and press Ctrl+V inside InPage."
+        "text": "Set your Windows keyboard language to ENG, paste your Unicode Urdu text into the converter, click Copy Text, and press Ctrl+V inside your InPage document."
       }
     }]
   }
@@ -38,8 +38,6 @@
     :root {
       --primary: #0f766e;
       --primary-hover: #115e59;
-      --accent: #0284c7;
-      --accent-hover: #0369a1;
       --bg: #f8fafc;
       --card: #ffffff;
       --text: #0f172a;
@@ -56,31 +54,31 @@
     header {
       background: var(--primary);
       color: #fff;
-      padding: 1.25rem 1rem 0.9rem;
+      padding: 1.25rem 1rem 1rem;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     header h1 { font-size: 1.55rem; margin-bottom: 0.2rem; }
     .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem; opacity: 0.95; }
 
-    nav {
+    nav.top-nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 0.5rem;
       margin-top: 0.9rem;
     }
-    nav a {
+    nav.top-nav a {
       color: #fff;
       text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 600;
+      background: rgba(255,255,255,0.14);
       padding: 0.45rem 0.9rem;
       border-radius: 6px;
-      background: rgba(255, 255, 255, 0.14);
+      font-size: 0.85rem;
+      font-weight: 600;
       transition: 0.2s;
     }
-    nav a:hover, nav a.active {
+    nav.top-nav a:hover, nav.top-nav a.active {
       background: #fff;
       color: var(--primary);
     }
@@ -91,7 +89,7 @@
       padding: 0 1rem;
     }
 
-    .mode-bar {
+    .toolbar {
       display: flex;
       flex-wrap: wrap;
       gap: 0.6rem;
@@ -99,46 +97,60 @@
       align-items: center;
       margin-bottom: 0.75rem;
     }
-    .mode-btn, .file-label, .convert-btn {
+    .mode-btn {
       padding: 0.6rem 1.15rem;
       border: 2px solid var(--primary);
       background: #fff;
       color: var(--primary);
       font-weight: 600;
-      font-size: 0.9rem;
       border-radius: 8px;
       cursor: pointer;
       transition: 0.2s;
-      display: inline-block;
+      font-size: 0.9rem;
     }
-    .mode-btn.active, .mode-btn:hover, .file-label:hover {
+    .mode-btn.active, .mode-btn:hover {
       background: var(--primary);
       color: #fff;
     }
     .convert-btn {
-      background: var(--accent);
-      border-color: var(--accent);
+      padding: 0.6rem 1.35rem;
+      border: 2px solid #0284c7;
+      background: #0284c7;
       color: #fff;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: 0.2s;
     }
     .convert-btn:hover {
-      background: var(--accent-hover);
-      border-color: var(--accent-hover);
+      background: #0369a1;
+      border-color: #0369a1;
     }
-    input[type="file"] { display: none; }
-
-    .detect-banner {
-      text-align: center;
-      font-size: 0.85rem;
-      font-weight: 600;
+    .upload-label {
+      padding: 0.6rem 1.15rem;
+      border: 2px dashed var(--primary);
+      background: #f0fdfa;
       color: var(--primary);
-      margin-bottom: 0.75rem;
-      min-height: 1.3rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .upload-label:hover { background: #ccfbf1; }
+
+    .detect-badge {
+      text-align: center;
+      margin-bottom: 0.9rem;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: #0f766e;
     }
 
-    .eng-alert {
+    .eng-notice {
       background: #fef2f2;
       border: 1px solid #fecaca;
-      color: #b91c1c;
+      color: #991b1b;
       padding: 0.65rem 1rem;
       border-radius: 8px;
       font-size: 0.88rem;
@@ -179,21 +191,16 @@
       padding: 0.85rem;
       border: 1px solid var(--border);
       border-radius: 8px;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       resize: vertical;
       outline: none;
+      font-family: 'Segoe UI', Tahoma, monospace;
     }
     textarea:focus { border-color: var(--primary); }
     .urdu-font {
       font-family: 'Noto Nastaliq Urdu', serif;
       line-height: 2.2;
       font-size: 1.25rem;
-    }
-    .code-font {
-      font-family: Consolas, 'Courier New', monospace;
-      font-size: 1rem;
-      line-height: 1.6;
-      background: #f1f5f9;
     }
 
     .actions {
@@ -221,6 +228,8 @@
       margin-top: 0.6rem;
       font-size: 0.82rem;
       color: var(--muted);
+      display: flex;
+      gap: 1rem;
     }
 
     .seo-section {
@@ -231,30 +240,31 @@
       margin-top: 2rem;
     }
     .seo-section h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--primary); }
-    .seo-section h3 { font-size: 1.05rem; margin: 1.1rem 0 0.35rem; }
+    .seo-section h3 { font-size: 1.05rem; margin: 1rem 0 0.35rem; }
     .seo-section p { color: #334155; font-size: 0.95rem; }
 
     footer {
       text-align: center;
-      padding: 1.75rem 1rem;
+      padding: 1.5rem 1rem;
       color: var(--muted);
       font-size: 0.85rem;
       margin-top: 2rem;
       border-top: 1px solid var(--border);
+      background: #fff;
     }
-    footer .footer-links {
-      margin-bottom: 0.6rem;
+    .footer-links {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      justify-content: center;
+      gap: 1.25rem;
+      margin-bottom: 0.6rem;
     }
-    footer a {
+    .footer-links a {
       color: var(--primary);
       text-decoration: none;
       font-weight: 600;
     }
-    footer a:hover { text-decoration: underline; }
+    .footer-links a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -262,8 +272,8 @@
 <header>
   <h1>Urdu Unicode &amp; InPage Converter</h1>
   <p class="urdu-title">ان پیج سے یونیکوڈ اور یونیکوڈ سے ان پیج اردو کنورٹر</p>
-  <nav>
-    <a href="index.html" class="active">InPage ↔ Unicode</a>
+  <nav class="top-nav">
+    <a href="index.html" class="active">InPage &harr; Unicode</a>
     <a href="urdu-png.html">Urdu Text to PNG</a>
     <a href="photoshop-urdu.html">Photoshop Urdu Fixer</a>
     <a href="shayari-maker.html">Shayari Card Maker</a>
@@ -271,30 +281,32 @@
 </header>
 
 <div class="container">
-  <div class="mode-bar">
-    <button type="button" class="mode-btn active" id="btnInpageToUni" onclick="manualSetMode('inpageToUni')">InPage → Unicode</button>
-    <button type="button" class="mode-btn" id="btnUniToInpage" onclick="manualSetMode('uniToInpage')">Unicode → InPage</button>
-    <button type="button" class="convert-btn" onclick="handleInput(true)">Convert Now ⚡</button>
-    <label class="file-label" for="fileUpload">Upload .TXT / .INP</label>
-    <input type="file" id="fileUpload" accept=".txt,.inp" onchange="handleFileUpload(event)" />
+  <div class="toolbar">
+    <button class="mode-btn active" id="btnInpageToUni" onclick="manualSetMode('inpageToUni')">InPage &rarr; Unicode</button>
+    <button class="mode-btn" id="btnUniToInpage" onclick="manualSetMode('uniToInpage')">Unicode &rarr; InPage</button>
+    <button class="convert-btn" onclick="handleInput(true)">Convert Now &#9889;</button>
+    <label class="upload-label">
+      Upload .TXT / .INP
+      <input type="file" id="fileInput" accept=".txt,.inp" style="display:none;" onchange="handleFileUpload(event)" />
+    </label>
   </div>
 
-  <div class="detect-banner" id="detectBanner">Smart Auto-Detect Active: Paste InPage or Unicode text anywhere</div>
+  <div class="detect-badge" id="detectBadge">Smart Auto-Detect Active: Paste InPage or Unicode text anywhere</div>
 
-  <div class="eng-alert" id="engAlert">
-    <strong>Important for InPage Users:</strong> Before clicking <b>Copy Text</b> and pasting into InPage (Ctrl+V), make sure your Windows keyboard language (bottom-right taskbar) is set to <b>ENG (English)</b>!
+  <div class="eng-notice" id="engNotice">
+    <strong>Important:</strong> Make sure your Windows taskbar keyboard language is set to <strong>ENG</strong> before clicking Copy Text and pasting into InPage!
   </div>
 
   <div class="grid">
     <div class="box-card">
       <div class="box-header">
         <span id="inputLabel">Paste InPage or Unicode Text Here:</span>
-        <button type="button" class="btn" onclick="clearAll()">Clear</button>
+        <button class="btn" onclick="clearAll()">Clear</button>
       </div>
-      <textarea id="inputText" placeholder="Paste either InPage text or Unicode Urdu text here..." oninput="handleInput(true)"></textarea>
+      <textarea id="inputText" class="urdu-font" dir="rtl" placeholder="یہاں ان پیج یا یونیکوڈ اردو متن پیسٹ کریں..." oninput="handleInput(true)"></textarea>
       <div class="actions">
-        <button type="button" class="btn" onclick="cleanSpaces()">Fix Extra Spaces</button>
-        <button type="button" class="btn" onclick="convertDigits()">123 → ۱۲۳</button>
+        <button class="btn" onclick="cleanSpaces()">Fix Extra Spaces</button>
+        <button class="btn" onclick="convertDigits()">123 &rarr; ۱۲۳</button>
       </div>
       <div class="stats" id="inputStats">Words: 0 | Characters: 0</div>
     </div>
@@ -304,10 +316,10 @@
         <span id="outputLabel">Converted Output:</span>
         <span id="copyStatus" style="color: var(--primary); font-size: 0.85rem;"></span>
       </div>
-      <textarea id="outputText" class="urdu-font" dir="rtl" readonly placeholder="تبدیل شدہ متن یہاں ظاہر ہوگا..."></textarea>
+      <textarea id="outputText" readonly placeholder="Converted text will appear here..."></textarea>
       <div class="actions">
-        <button type="button" class="btn btn-primary" onclick="copyOutput()">Copy Text</button>
-        <button type="button" class="btn" onclick="downloadTxt()">Download .TXT</button>
+        <button class="btn btn-primary" onclick="copyOutput()">Copy Text</button>
+        <button class="btn" onclick="downloadOutput()">Download File</button>
       </div>
       <div class="stats" id="outputStats">Words: 0 | Characters: 0</div>
     </div>
@@ -315,12 +327,10 @@
 
   <section class="seo-section">
     <h2>Smart Auto-Detect InPage &amp; Unicode Urdu Converter</h2>
-    <p>Simply paste either InPage symbols or standard Unicode Urdu text into the input box. Our smart auto-detection engine immediately recognizes the text format and converts it cleanly in your browser—compatible with InPage 2000, InPage 2009, InPage 2012, and InPage 3.</p>
+    <p>Simply paste either InPage symbols or standard Unicode Urdu text into the input box. Our smart auto-detection engine immediately recognizes the text format and converts it cleanly in your browser with zero page reloads.</p>
 
-    <h3>How to Paste Converted Urdu Into InPage Without Question Marks (????)</h3>
-    <p>1. Paste your Unicode Urdu text into the left box.<br>
-       2. Check your Windows taskbar (bottom-right corner) and switch the keyboard language to <strong>ENG</strong>.<br>
-       3. Click <strong>Copy Text</strong> on the right box, open your InPage document, and press <strong>Ctrl + V</strong>.</p>
+    <h3>How to Paste Converted Text Into InPage (2000, 2009, 2012 &amp; InPage 3)</h3>
+    <p>Switch your Windows taskbar keyboard layout to <strong>ENG</strong>, paste your Unicode Urdu text into the left box, click <strong>Copy Text</strong>, and press <strong>Ctrl+V</strong> inside your InPage text box. Every letter and punctuation mark renders in crisp Noori Nastaliq without question marks.</p>
   </section>
 </div>
 
@@ -331,98 +341,82 @@
     <a href="privacy-policy.html">Privacy Policy</a>
     <a href="contact.html">Contact Us</a>
   </div>
-  <p>&copy; 2026 Urdu Unicode Converter (urdu-converter.pages.dev). Free Online Utility.</p>
+  <p>&copy; 2026 Urdu Unicode Converter Tool. All Rights Reserved.</p>
 </footer>
 
 <script>
   var currentMode = 'inpageToUni';
-  var INPAGE_PREFIX = '\u0004';
 
-  // Verified InPage CP-1252 Glyph Table (Exact standard InPage Urdu character slots)
-  // Note the exact order after ک (0x9C): گ (0x9D), ل (0x9E), م (0x9F), ن (0xA0), ں (0xA1), و (0xA2), ہ (0xA3), ھ (0xA4), ء (0xA5), ی (0xA6), ے (0xA7)
-  var unicodeToCp1252 = {
-    'ا': '\u0192', // 0x81
-    'ب': '\u201E', // 0x82
-    'پ': '\u2026', // 0x83
-    'ت': '\u2020', // 0x84
-    'ٹ': '\u2021', // 0x85
-    'ث': '\u02C6', // 0x86
-    'ج': '\u2030', // 0x87
-    'چ': '\u0160', // 0x88
-    'ح': '\u2039', // 0x89
-    'خ': '\u0152', // 0x8A
-    'د': '\u008D', // 0x8B
-    'ڈ': '\u017D', // 0x8C
-    'ذ': '\u008F', // 0x8D
-    'ر': '\u0090', // 0x8E
-    'ڑ': '\u2018', // 0x8F
-    'ز': '\u2019', // 0x90
-    'ژ': '\u201C', // 0x91
-    'س': '\u201D', // 0x92
-    'ش': '\u2022', // 0x93
-    'ص': '\u2013', // 0x94
-    'ض': '\u2014', // 0x95
-    'ط': '\u02DC', // 0x96
-    'ظ': '\u2122', // 0x97
-    'ع': '\u0161', // 0x98
-    'غ': '\u203A', // 0x99
-    'ف': '\u0153', // 0x9A
-    'ق': '\u009D', // 0x9B
-    'ک': '\u017E', // 0x9C (Kaf)
-    'ك': '\u017E', // Arabic Kaf -> Urdu Kaf
-    'گ': '\u0178', // 0x9D (Gaf)
-    'ل': '\u00A0', // 0x9E (Lam)
-    'م': '\u00A1', // 0x9F (Meem - fixes میں -> مہں!)
-    'ن': '\u00A2', // 0xA0 (Noon)
-    'ں': '\u00A3', // 0xA1 (Noon Ghunna - fixes ہیں -> نہں!)
-    'و': '\u00A4', // 0xA2 (Wao)
-    'ہ': '\u00A5', // 0xA3 (Choti He - fixes ہے / رہنما!)
-    'ھ': '\u00A6', // 0xA4 (Do Chashmi He)
-    'ء': '\u00A7', // 0xA5 (Hamza)
-    'ی': '\u00A8', // 0xA6 (Choti Ye - fixes لیے / غذائیت!)
-    'ي': '\u00A8', // Arabic Yeh -> Urdu Choti Ye
-    'ے': '\u00A9', // 0xA7 (Bari Ye - fixes کے / لیے!)
-    'آ': '\u00AA', // 0xA8 (Alif Madd)
-    'ؤ': '\u00AB', // 0xA9 (Wao Hamza)
-    'ئ': '\u00AC', // 0xAA (Ye Hamza - fixes غذائیت!)
-    'ۃ': '\u00AD', // 0xAB (Teh Marbuta)
-    '۔': '\u00AE', // 0xAC (Full stop / Dash)
-    '،': '\u00AF', // 0xAD (Urdu Comma)
-    '؛': '\u00B0', // 0xAE (Urdu Semicolon)
-    '؟': '\u00B1', // 0xAF (Urdu Question Mark)
-    '۰': '\u00B2', // 0xB0
-    '۱': '\u00B3', // 0xB1
-    '۲': '\u00B4', // 0xB2
-    '۳': '\u00B5', // 0xB3
-    '۴': '\u00B6', // 0xB4
-    '۵': '\u00B7', // 0xB5
-    '۶': '\u00B8', // 0xB6
-    '۷': '\u00B9', // 0xB7
-    '۸': '\u00BA', // 0xB8
-    '۹': '\u00BB', // 0xB9
-    'َ': '\u00BC', // Zabar
-    'ِ': '\u00BD', // Zer
-    'ُ': '\u00BE', // Pesh
-    'ّ': '\u00BF', // Tashdeed
-    'ْ': '\u00C0', // Jazm
-    'ٰ': '\u00C1', // Khari Zabar
-    'ً': '\u00C2', // Do Zabar
-    'ٍ': '\u00C3', // Do Zer
-    'ٌ': '\u00C4', // Do Pesh
-    ':': ':',
-    '!': '!',
-    '(': '(',
-    ')': ')',
-    '-': '-'
+  // Exact CP-1252 printable characters matching InPage 0x81..0xFF byte slots
+  var cp1252Chars = {
+    0x81: '\u0081', 0x82: '\u201A', 0x83: '\u0192', 0x84: '\u201E',
+    0x85: '\u2026', 0x86: '\u2020', 0x87: '\u2021', 0x88: '\u02C6',
+    0x89: '\u2030', 0x8A: '\u0160', 0x8B: '\u2039', 0x8C: '\u0152',
+    0x8D: '\u008D', 0x8E: '\u017D', 0x8F: '\u008F', 0x90: '\u0090',
+    0x91: '\u2018', 0x92: '\u2019', 0x93: '\u201C', 0x94: '\u201D',
+    0x95: '\u2022', 0x96: '\u2013', 0x97: '\u2014', 0x98: '\u02DC',
+    0x99: '\u2122', 0x9A: '\u0161', 0x9B: '\u203A', 0x9C: '\u0153',
+    0x9D: '\u009D', 0x9E: '\u017E', 0x9F: '\u0178', 0xA0: '\u00A0',
+    0xA1: '\u00A1', 0xA2: '\u00A2', 0xA3: '\u00A3', 0xA4: '\u00A4',
+    0xA5: '\u00A5', 0xA6: '\u00A6', 0xA7: '\u00A7', 0xA8: '\u00A8',
+    0xA9: '\u00A9', 0xAA: '\u00AA', 0xAB: '\u00AB', 0xAC: '\u00AC',
+    0xAD: '\u00AD', 0xAE: '\u00AE', 0xAF: '\u00AF', 0xB0: '\u00B0',
+    0xB1: '\u00B1', 0xB2: '\u00B2', 0xB3: '\u00B3', 0xB4: '\u00B4',
+    0xB5: '\u00B5', 0xB6: '\u00B6', 0xB7: '\u00B7', 0xB8: '\u00B8',
+    0xB9: '\u00B9', 0xBA: '\u00BA', 0xBB: '\u00BB', 0xBC: '\u00BC',
+    0xBD: '\u00BD', 0xBE: '\u00BE', 0xBF: '\u00BF', 0xC0: '\u00C0',
+    0xC1: '\u00C1', 0xC2: '\u00C2', 0xC3: '\u00C3', 0xC4: '\u00C4',
+    0xC5: '\u00C5', 0xC6: '\u00C6', 0xC7: '\u00C7', 0xC8: '\u00C8',
+    0xC9: '\u00C9', 0xCA: '\u00CA', 0xCB: '\u00CB', 0xCC: '\u00CC',
+    0xCD: '\u00CD', 0xCE: '\u00CE', 0xCF: '\u00CF', 0xD0: '\u00D0',
+    0xD1: '\u00D1', 0xD2: '\u00D2', 0xD3: '\u00D3', 0xD4: '\u00D4',
+    0xD5: '\u00D5', 0xD6: '\u00D6', 0xD7: '\u00D7', 0xD8: '\u00D8',
+    0xD9: '\u00D9', 0xDA: '\u00DA', 0xDB: '\u00DB', 0xDC: '\u00DC',
+    0xDD: '\u00DD', 0xDE: '\u00DE', 0xDF: '\u00DF', 0xE0: '\u00E0',
+    0xE1: '\u00E1', 0xE2: '\u00E2', 0xE3: '\u00E3', 0xE4: '\u00E4',
+    0xE5: '\u00E5', 0xE6: '\u00E6', 0xE7: '\u00E7', 0xE8: '\u00E8',
+    0xE9: '\u00E9', 0xEA: '\u00EA', 0xEB: '\u00EB', 0xEC: '\u00EC',
+    0xED: '\u00ED', 0xEE: '\u00EE', 0xEF: '\u00EF', 0xF0: '\u00F0',
+    0xF1: '\u00F1', 0xF2: '\u00F2', 0xF3: '\u00F3', 0xF4: '\u00F4',
+    0xF5: '\u00F5', 0xF6: '\u00F6', 0xF7: '\u00F7', 0xF8: '\u00F8',
+    0xF9: '\u00F9', 0xFA: '\u00FA', 0xFB: '\u00FB', 0xFC: '\u00FC',
+    0xFD: '\u00FD', 0xFE: '\u00FE', 0xFF: '\u00FF'
   };
 
-  var cp1252ToUnicode = {};
-  for (var uChar in unicodeToCp1252) {
-    if (unicodeToCp1252.hasOwnProperty(uChar)) {
-      var codeChar = unicodeToCp1252[uChar];
-      if (!cp1252ToUnicode[codeChar]) {
-        cp1252ToUnicode[codeChar] = uChar;
-      }
+  function b2c(byteVal) {
+    return cp1252Chars[byteVal] || String.fromCharCode(byteVal);
+  }
+
+  // Verified InPage 2000/2009/2012/3 byte table (from user's working reference screenshot)
+  var urduToByte = {
+    'ا': 0x81, 'ب': 0x82, 'پ': 0x83, 'ت': 0x84, 'ٹ': 0x85,
+    'ث': 0x86, 'ج': 0x87, 'چ': 0x88, 'ح': 0x89, 'خ': 0x8A,
+    'د': 0x8B, 'ڈ': 0x8C, 'ذ': 0x8D, 'ر': 0x8E, 'ڑ': 0x8F,
+    'ز': 0x90, 'ژ': 0x91, 'س': 0x92, 'ش': 0x93, 'ص': 0x94,
+    'ض': 0x95, 'ط': 0x96, 'ظ': 0x97, 'ع': 0x98, 'غ': 0x99,
+    'ف': 0x9A, 'ق': 0x9B, 'ک': 0x9C, 'گ': 0x9D, 'ل': 0x9E,
+    'م': 0x9F, 'ن': 0xA0, 'ں': 0xA1, 'و': 0xA2, 'ہ': 0xA3,
+    'ھ': 0xA4, 'ء': 0xA5, 'ی': 0xA6, 'ے': 0xA7, 'آ': 0xA8,
+    'ؤ': 0xA9, 'ئ': 0xAA, 'ۃ': 0xAB, '۔': 0xAC, '،': 0xAD,
+    '؛': 0xAE, '؟': 0xAF, '۰': 0xB0, '۱': 0xB1, '۲': 0xB2,
+    '۳': 0xB3, '۴': 0xB4, '۵': 0xB5, '۶': 0xB6, '۷': 0xB7,
+    '۸': 0xB8, '۹': 0xB9, 'َ': 0xC1, 'ِ': 0xC2, 'ُ': 0xC3,
+    'ّ': 0xC4, 'ْ': 0xC5, 'ٰ': 0xC6, 'ٖ': 0xC7, 'ٗ': 0xC8,
+    'ً': 0xC9, 'ٍ': 0xCA, 'ٌ': 0xCB, 'ۂ': 0xA3, 'ۓ': 0xA7,
+    'ك': 0x9C, 'ي': 0xA6, 'ى': 0xA6, 'ة': 0xAB, 'ھ': 0xA4
+  };
+
+  var unicodeToInpageMap = {};
+  var inpageCharToUnicode = {};
+
+  for (var uChar in urduToByte) {
+    if (urduToByte.hasOwnProperty(uChar)) {
+      var byteCode = urduToByte[uChar];
+      var cpChar = b2c(byteCode);
+      var rawChar = String.fromCharCode(byteCode);
+      unicodeToInpageMap[uChar] = '\u0004' + cpChar;
+      if (!inpageCharToUnicode[cpChar]) inpageCharToUnicode[cpChar] = uChar;
+      if (!inpageCharToUnicode[rawChar]) inpageCharToUnicode[rawChar] = uChar;
     }
   }
 
@@ -430,97 +424,137 @@
     currentMode = mode;
     document.getElementById('btnInpageToUni').classList.toggle('active', mode === 'inpageToUni');
     document.getElementById('btnUniToInpage').classList.toggle('active', mode === 'uniToInpage');
-    document.getElementById('engAlert').style.display = (mode === 'uniToInpage') ? 'block' : 'none';
+    document.getElementById('engNotice').style.display = (mode === 'uniToInpage') ? 'block' : 'none';
 
     var inputBox = document.getElementById('inputText');
     var outputBox = document.getElementById('outputText');
 
     if (mode === 'inpageToUni') {
-      document.getElementById('inputLabel').textContent = 'Paste InPage Text Here:';
+      document.getElementById('inputLabel').textContent = 'Paste InPage Symbols Here:';
       document.getElementById('outputLabel').textContent = 'Converted Unicode Urdu:';
-      inputBox.className = 'code-font';
+      inputBox.classList.remove('urdu-font');
       inputBox.dir = 'ltr';
-      outputBox.className = 'urdu-font';
+      outputBox.classList.add('urdu-font');
       outputBox.dir = 'rtl';
     } else {
       document.getElementById('inputLabel').textContent = 'Paste Unicode Urdu Here:';
-      document.getElementById('outputLabel').textContent = 'Converted InPage Format (Ready to Copy):';
-      inputBox.className = 'urdu-font';
+      document.getElementById('outputLabel').textContent = 'Converted InPage Symbols (Ready to Paste):';
+      inputBox.classList.add('urdu-font');
       inputBox.dir = 'rtl';
-      outputBox.className = 'code-font';
+      outputBox.classList.remove('urdu-font');
       outputBox.dir = 'ltr';
     }
   }
 
   function manualSetMode(mode) {
     applyModeUI(mode);
-    document.getElementById('detectBanner').textContent = 'Manual Mode Selected: ' + (mode === 'inpageToUni' ? 'InPage → Unicode' : 'Unicode → InPage');
-    convertText();
+    document.getElementById('detectBadge').textContent =
+      mode === 'inpageToUni'
+        ? 'Manual Mode: InPage Symbols -> Unicode Urdu'
+        : 'Manual Mode: Unicode Urdu -> InPage Format';
+    runConversion();
   }
 
-  function handleInput(allowAutoDetect) {
+  function handleInput(autoDetect) {
     var text = document.getElementById('inputText').value;
-    if (allowAutoDetect && text.trim().length > 0) {
-      var hasUrduUnicode = /[\u0600-\u06FF]/.test(text);
-      var hasInpageMarkers = text.indexOf(INPAGE_PREFIX) !== -1 || /[\u0192\u201E\u2026\u2020\u2021\u02C6\u2030\u0160\u2039\u0152\u017D\u2018\u2019\u201C\u201D\u2022\u2013\u2014\u02DC\u2122\u0161\u203A\u0153\u017E\u0178]/.test(text);
+    var badge = document.getElementById('detectBadge');
 
-      if (hasUrduUnicode && currentMode !== 'uniToInpage') {
-        applyModeUI('uniToInpage');
-        document.getElementById('detectBanner').textContent = 'Auto-Detected Unicode Urdu → Converted to InPage Format';
-      } else if (!hasUrduUnicode && hasInpageMarkers && currentMode !== 'inpageToUni') {
-        applyModeUI('inpageToUni');
-        document.getElementById('detectBanner').textContent = 'Auto-Detected InPage Text → Converted to Unicode Urdu';
+    if (!text.trim()) {
+      badge.textContent = 'Smart Auto-Detect Active: Paste InPage or Unicode text anywhere';
+      runConversion();
+      return;
+    }
+
+    if (autoDetect) {
+      var hasUrduUnicode = /[\u0600-\u06FF\u0750-\u077F\uFB50-\uFDFF\uFE70-\uFEFF]/.test(text);
+      var hasInpageMarker = text.indexOf('\u0004') !== -1;
+
+      if (hasUrduUnicode && !hasInpageMarker) {
+        if (currentMode !== 'uniToInpage') {
+          applyModeUI('uniToInpage');
+        }
+        badge.textContent = 'Auto-Detected Unicode Urdu -> Converted to InPage Format';
+      } else {
+        if (currentMode !== 'inpageToUni') {
+          applyModeUI('inpageToUni');
+        }
+        badge.textContent = 'Auto-Detected InPage Text -> Converted to Unicode Urdu';
       }
     }
-    convertText();
+
+    runConversion();
   }
 
-  function convertText() {
+  function runConversion() {
     var input = document.getElementById('inputText').value;
     var result = '';
 
     if (currentMode === 'uniToInpage') {
-      // Pre-normalize compound Urdu forms (e.g., ہ + ٔ or ئ) so InPage renders them properly
-      var normalized = input
-        .replace(/\u06C1\u0654/g, '\u06C2') // ۂ -> ۂ
-        .replace(/\u06D2\u0654/g, '\u06D3'); // ۓ -> ۓ
-
-      for (var i = 0; i < normalized.length; i++) {
-        var ch = normalized.charAt(i);
-        if (ch === '\u06C2') {
-          // ۂ -> ہ + ء
-          result += INPAGE_PREFIX + unicodeToCp1252['ہ'] + INPAGE_PREFIX + unicodeToCp1252['ء'];
-        } else if (ch === '\u06D3') {
-          // ۓ -> ے + ء
-          result += INPAGE_PREFIX + unicodeToCp1252['ے'] + INPAGE_PREFIX + unicodeToCp1252['ء'];
-        } else if (unicodeToCp1252[ch] !== undefined) {
-          var mapped = unicodeToCp1252[ch];
-          if (ch === ' ' || ch === '\n' || ch === '\r' || ch === '\t' || /[0-9A-Za-z:!()\-]/.test(ch)) {
-            result += mapped;
-          } else {
-            result += INPAGE_PREFIX + mapped;
-          }
+      for (var i = 0; i < input.length; i++) {
+        var ch = input.charAt(i);
+        if (unicodeToInpageMap[ch]) {
+          result += unicodeToInpageMap[ch];
+        } else if (ch === ' ') {
+          result += '\u0004 ';
         } else {
           result += ch;
         }
       }
     } else {
-      var cleaned = input.split(INPAGE_PREFIX).join('');
+      var cleaned = input.replace(/\u0004/g, '');
       for (var j = 0; j < cleaned.length; j++) {
         var c = cleaned.charAt(j);
-        result += cp1252ToUnicode[c] !== undefined ? cp1252ToUnicode[c] : c;
+        result += inpageCharToUnicode[c] ? inpageCharToUnicode[c] : c;
       }
     }
 
     document.getElementById('outputText').value = result;
     updateStats(input, 'inputStats');
-    updateStats(result.split(INPAGE_PREFIX).join(''), 'outputStats');
+    updateStats(result, 'outputStats');
   }
 
   function updateStats(text, elementId) {
     var trimmed = text.trim();
     var words = trimmed ? trimmed.split(/\s+/).length : 0;
     document.getElementById(elementId).textContent = 'Words: ' + words + ' | Characters: ' + text.length;
+  }
+
+  function cleanSpaces() {
+    var inputBox = document.getElementById('inputText');
+    inputBox.value = inputBox.value.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
+    handleInput(true);
+  }
+
+  function convertDigits() {
+    var urduDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
+    var inputBox = document.getElementById('inputText');
+    inputBox.value = inputBox.value.replace(/[0-9]/g, function(d) { return urduDigits[d]; });
+    handleInput(true);
+  }
+
+  function copyOutput() {
+    var output = document.getElementById('outputText');
+    if (!output.value) return;
+    output.select();
+    output.setSelectionRange(0, 999999);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(output.value);
+    } else {
+      document.execCommand('copy');
+    }
+    var status = document.getElementById('copyStatus');
+    status.textContent = 'Copied!';
+    setTimeout(function() { status.textContent = ''; }, 2000);
+  }
+
+  function downloadOutput() {
+    var text = document.getElementById('outputText').value;
+    if (!text) return;
+    var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = currentMode === 'inpageToUni' ? 'urdu-unicode.txt' : 'inpage-converted.txt';
+    a.click();
   }
 
   function handleFileUpload(event) {
@@ -531,50 +565,13 @@
       document.getElementById('inputText').value = e.target.result;
       handleInput(true);
     };
-    reader.readAsText(file);
-  }
-
-  function cleanSpaces() {
-    var inputBox = document.getElementById('inputText');
-    inputBox.value = inputBox.value.replace(/[ \t]+/g, ' ').replace(/\n{3,}/g, '\n\n').trim();
-    handleInput(false);
-  }
-
-  function convertDigits() {
-    var urduDigits = ['۰','۱','۲','۳','۴','۵','۶','۷','۸','۹'];
-    var inputBox = document.getElementById('inputText');
-    inputBox.value = inputBox.value.replace(/[0-9]/g, function(d) { return urduDigits[d]; });
-    handleInput(false);
-  }
-
-  function copyOutput() {
-    var output = document.getElementById('outputText');
-    if (!output.value) return;
-    output.select();
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(output.value);
-    } else {
-      document.execCommand('copy');
-    }
-    var status = document.getElementById('copyStatus');
-    status.textContent = currentMode === 'uniToInpage' ? 'Copied! Paste in InPage (ENG keyboard)' : 'Copied!';
-    setTimeout(function() { status.textContent = ''; }, 3000);
-  }
-
-  function downloadTxt() {
-    var text = document.getElementById('outputText').value;
-    if (!text) return;
-    var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
-    var a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = currentMode === 'inpageToUni' ? 'urdu-unicode.txt' : 'inpage-text.txt';
-    a.click();
+    reader.readAsText(file, 'utf-8');
   }
 
   function clearAll() {
     document.getElementById('inputText').value = '';
     document.getElementById('outputText').value = '';
-    document.getElementById('detectBanner').textContent = 'Smart Auto-Detect Active: Paste InPage or Unicode text anywhere';
+    document.getElementById('detectBadge').textContent = 'Smart Auto-Detect Active: Paste InPage or Unicode text anywhere';
     updateStats('', 'inputStats');
     updateStats('', 'outputStats');
   }
