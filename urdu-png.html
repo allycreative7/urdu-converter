@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urdu Text to Transparent PNG Generator Online Free | اردو پی این جی میکر</title>
+  <meta name="description" content="Type or paste Urdu text in Nastaliq font and download a high-resolution transparent PNG image for YouTube thumbnails, Canva, CapCut, and Photoshop." />
+  <meta name="keywords" content="Urdu text to PNG, Urdu transparent PNG maker, Nastaliq PNG generator, YouTube Urdu thumbnail text, اردو پی این جی" />
+  <link rel="canonical" href="https://urdu-converter.pages.dev/urdu-png.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0f766e;
+      --primary-hover: #115e59;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #cbd5e1;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.25rem 1rem 0.9rem;
+      text-align: center;
+    }
+    header h1 { font-size: 1.55rem; margin-bottom: 0.25rem; }
+    .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem; }
+
+    nav {
+      background: #115e59;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+    }
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+    nav a:hover, nav a.active {
+      background: #ffffff;
+      color: #0f766e;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 1.5rem auto;
+      padding: 0 1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      margin-bottom: 1.25rem;
+    }
+    textarea {
+      width: 100%;
+      height: 130px;
+      padding: 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: 'Noto Nastaliq Urdu', serif;
+      font-size: 1.4rem;
+      line-height: 2.2;
+      outline: none;
+    }
+    .controls {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+    .control-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--muted);
+    }
+    .control-group input[type="color"],
+    .control-group input[type="range"],
+    .control-group select {
+      width: 100%;
+      height: 38px;
+      cursor: pointer;
+    }
+    .preview-wrap {
+      background-image: linear-gradient(45deg, #e2e8f0 25%, transparent 25%),
+                        linear-gradient(-45deg, #e2e8f0 25%, transparent 25%),
+                        linear-gradient(45deg, transparent 75%, #e2e8f0 75%),
+                        linear-gradient(-45deg, transparent 75%, #e2e8f0 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      overflow-x: auto;
+    }
+    canvas { max-width: 100%; height: auto; }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+      width: 100%;
+    }
+    .btn-primary:hover { background: var(--primary-hover); }
+    .seo-section h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; }
+    .seo-section p { color: #334155; font-size: 0.95rem; }
+    footer { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Urdu Text to Transparent PNG Generator</h1>
+  <p class="urdu-title">اردو تحریر کو شفاف پی این جی تصویر میں تبدیل کریں</p>
+</header>
+
+<nav>
+  <a href="/" class="">InPage ↔ Unicode</a>
+  <a href="/urdu-png.html" class="active">Urdu Text to PNG</a>
+  <a href="/photoshop-urdu.html" class="">Photoshop Urdu Fixer</a>
+</nav>
+
+
+<div class="container">
+  <div class="card">
+    <label style="font-weight:600; display:block; margin-bottom:0.5rem;">Enter Urdu Text:</label>
+    <textarea id="urduInput" dir="rtl" oninput="renderCanvas()">خوش آمدید! خوبصورت اردو تحریر</textarea>
+
+    <div class="controls">
+      <div class="control-group">
+        <label>Text Color</label>
+        <input type="color" id="textColor" value="#0f172a" oninput="renderCanvas()" />
+      </div>
+      <div class="control-group">
+        <label>Outline / Stroke Color</label>
+        <input type="color" id="strokeColor" value="#ffffff" oninput="renderCanvas()" />
+      </div>
+      <div class="control-group">
+        <label>Outline Thickness (<span id="strokeVal">4</span>px)</label>
+        <input type="range" id="strokeWidth" min="0" max="16" value="4" oninput="renderCanvas()" />
+      </div>
+      <div class="control-group">
+        <label>Font Size (<span id="sizeVal">64</span>px)</label>
+        <input type="range" id="fontSize" min="28" max="130" value="64" oninput="renderCanvas()" />
+      </div>
+    </div>
+
+    <div class="preview-wrap">
+      <canvas id="urduCanvas" width="900" height="260"></canvas>
+    </div>
+
+    <button class="btn-primary" onclick="downloadPng()">Download Transparent PNG</button>
+  </div>
+
+  <div class="card seo-section">
+    <h2>Create Crisp Nastaliq Urdu PNGs for YouTube, Canva &amp; CapCut</h2>
+    <p>Many video editors and mobile design apps break Urdu letters or lack Nastaliq fonts. Type or paste your converted Urdu text above, adjust text and outline colors for YouTube thumbnails, and download a ready-to-use transparent PNG image in one click.</p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2026 Urdu Unicode Converter (urdu-converter.pages.dev). Free Online Urdu Tools.
+</footer>
+
+<script>
+  function renderCanvas() {
+    const text = document.getElementById('urduInput').value || ' ';
+    const color = document.getElementById('textColor').value;
+    const strokeColor = document.getElementById('strokeColor').value;
+    const strokeWidth = parseInt(document.getElementById('strokeWidth').value, 10);
+    const fontSize = parseInt(document.getElementById('fontSize').value, 10);
+
+    document.getElementById('strokeVal').textContent = strokeWidth;
+    document.getElementById('sizeVal').textContent = fontSize;
+
+    const canvas = document.getElementById('urduCanvas');
+    const ctx = canvas.getContext('2d');
+    const lines = text.split('\n');
+    const lineHeight = fontSize * 2.2;
+
+    canvas.width = 1000;
+    canvas.height = Math.max(220, lines.length * lineHeight + 80);
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = `700 ${fontSize}px 'Noto Nastaliq Urdu', serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.direction = 'rtl';
+
+    lines.forEach((line, idx) => {
+      const y = (idx + 0.65) * lineHeight + 20;
+      if (strokeWidth > 0) {
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = strokeWidth;
+        ctx.strokeStyle = strokeColor;
+        ctx.strokeText(line, canvas.width / 2, y);
+      }
+      ctx.fillStyle = color;
+      ctx.fillText(line, canvas.width / 2, y);
+    });
+  }
+
+  function downloadPng() {
+    const canvas = document.getElementById('urduCanvas');
+    const link = document.createElement('a');
+    link.download = 'urdu-nastaliq-text.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }
+
+  document.fonts.ready.then(() => renderCanvas());
+</script>
+</body>
+</html>

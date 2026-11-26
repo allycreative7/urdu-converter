@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InPage to Unicode Urdu Converter Online Free | اردو کنورٹر</title>
-  <meta name="description" content="Convert InPage Urdu text to Unicode and Unicode to InPage instantly online for free. Fast, mobile-friendly Urdu text converter with one-click copy and download." />
+  <title>InPage to Unicode Urdu Converter Online Free | اردو یونیکوڈ کنورٹر</title>
+  <meta name="description" content="Convert InPage Urdu text to Unicode and Unicode to InPage instantly online for free. Supports .inp and .txt file upload, Urdu digit conversion, and one-click copy." />
   <meta name="keywords" content="InPage to Unicode, Unicode to InPage, Urdu Unicode Converter, Mbilal Urdu converter alternative, اردو یونیکوڈ کنورٹر" />
+  <link rel="canonical" href="https://urdu-converter.pages.dev/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
   <script type="application/ld+json">
   {
@@ -16,14 +21,14 @@
       "name": "How do I convert InPage text to Unicode Urdu?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Copy your Urdu text from InPage, paste it into the InPage input box on this page, and your Unicode Urdu text will appear automatically ready to copy."
+        "text": "Copy your Urdu text from InPage or upload your .inp/.txt file into the input box, and your clean Unicode Urdu text will appear automatically."
       }
     }, {
       "@type": "Question",
       "name": "Can I convert Unicode Urdu back to InPage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, click the 'Unicode -> InPage' mode button, paste your Unicode Urdu text, and copy the converted output directly into InPage."
+        "text": "Yes, switch to the 'Unicode → InPage' mode, paste your Unicode Urdu text, and copy the converted output directly into InPage."
       }
     }]
   }
@@ -41,7 +46,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -49,15 +54,33 @@
     header {
       background: var(--primary);
       color: #fff;
-      padding: 1.25rem 1rem;
+      padding: 1.25rem 1rem 0.9rem;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
-    header h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
-    header p { font-size: 0.95rem; opacity: 0.9; }
-    .urdu-title {
-      font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Urdu Typesetting', Tahoma, serif;
-      font-size: 1.35rem;
+    header h1 { font-size: 1.55rem; margin-bottom: 0.25rem; }
+    header p { font-size: 0.95rem; opacity: 0.95; }
+    .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.25rem; }
+
+    nav {
+      background: #115e59;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+    }
+    nav a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      transition: 0.2s;
+    }
+    nav a:hover, nav a.active {
+      background: #ffffff;
+      color: #0f766e;
     }
 
     .container {
@@ -65,7 +88,6 @@
       margin: 1.5rem auto;
       padding: 0 1rem;
     }
-
     .mode-bar {
       display: flex;
       flex-wrap: wrap;
@@ -87,7 +109,6 @@
       background: var(--primary);
       color: #fff;
     }
-
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -96,7 +117,6 @@
     @media (max-width: 768px) {
       .grid { grid-template-columns: 1fr; }
     }
-
     .box-card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -126,11 +146,10 @@
     }
     textarea:focus { border-color: var(--primary); }
     .urdu-font {
-      font-family: 'Jameel Noori Nastaleeq', 'Noto Nastaliq Urdu', 'Urdu Typesetting', Tahoma, serif;
+      font-family: 'Noto Nastaliq Urdu', serif;
       line-height: 2.2;
-      font-size: 1.35rem;
+      font-size: 1.25rem;
     }
-
     .actions {
       display: flex;
       flex-wrap: wrap;
@@ -151,7 +170,6 @@
     .btn:hover { background: #cbd5e1; }
     .btn-primary { background: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-hover); }
-
     .stats {
       margin-top: 0.6rem;
       font-size: 0.82rem;
@@ -159,18 +177,37 @@
       display: flex;
       gap: 1rem;
     }
-
+    .tools-promo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    @media (max-width: 768px) {
+      .tools-promo { grid-template-columns: 1fr; }
+    }
+    .promo-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem;
+      text-decoration: none;
+      color: var(--text);
+      transition: 0.2s;
+    }
+    .promo-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+    .promo-card h3 { color: var(--primary); font-size: 1.05rem; margin-bottom: 0.25rem; }
+    .promo-card p { font-size: 0.88rem; color: var(--muted); }
     .seo-section {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 1.5rem;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
     .seo-section h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--primary); }
     .seo-section h3 { font-size: 1.05rem; margin: 1rem 0 0.35rem; }
     .seo-section p { color: #334155; font-size: 0.95rem; }
-
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -187,10 +224,21 @@
   <p class="urdu-title">ان پیج سے یونیکوڈ اور یونیکوڈ سے ان پیج اردو کنورٹر</p>
 </header>
 
+<nav>
+  <a href="/" class="active">InPage ↔ Unicode</a>
+  <a href="/urdu-png.html" class="">Urdu Text to PNG</a>
+  <a href="/photoshop-urdu.html" class="">Photoshop Urdu Fixer</a>
+</nav>
+
+
 <div class="container">
   <div class="mode-bar">
-    <button class="mode-btn active" id="btnInpageToUni" onclick="setMode('inpageToUni')">InPage &rarr; Unicode</button>
-    <button class="mode-btn" id="btnUniToInpage" onclick="setMode('uniToInpage')">Unicode &rarr; InPage</button>
+    <button class="mode-btn active" id="btnInpageToUni" onclick="setMode('inpageToUni')">InPage → Unicode</button>
+    <button class="mode-btn" id="btnUniToInpage" onclick="setMode('uniToInpage')">Unicode → InPage</button>
+    <label class="mode-btn" style="cursor:pointer;">
+      Upload .TXT / .INP
+      <input type="file" id="fileUpload" accept=".txt,.inp" style="display:none;" onchange="handleFile(event)" />
+    </label>
   </div>
 
   <div class="grid">
@@ -199,10 +247,10 @@
         <span id="inputLabel">Paste InPage Text Here:</span>
         <button class="btn" onclick="clearAll()">Clear</button>
       </div>
-      <textarea id="inputText" placeholder="Paste your text here..." oninput="convertText()"></textarea>
+      <textarea id="inputText" placeholder="Paste your text here or upload a .txt / .inp file..." oninput="convertText()"></textarea>
       <div class="actions">
         <button class="btn" onclick="cleanSpaces()">Fix Extra Spaces</button>
-        <button class="btn" onclick="convertDigits()">123 &rarr; ۱۲۳</button>
+        <button class="btn" onclick="convertDigits()">123 → ۱۲۳</button>
       </div>
       <div class="stats" id="inputStats">Words: 0 | Characters: 0</div>
     </div>
@@ -221,20 +269,31 @@
     </div>
   </div>
 
+  <div class="tools-promo">
+    <a href="/urdu-png.html" class="promo-card">
+      <h3>Urdu Text to Transparent PNG →</h3>
+      <p>Create crisp Nastaliq Urdu PNG images for YouTube thumbnails, Canva, and CapCut.</p>
+    </a>
+    <a href="/photoshop-urdu.html" class="promo-card">
+      <h3>Fix Broken Urdu in Photoshop &amp; Premiere →</h3>
+      <p>Convert disconnected backward Urdu letters (ا ر د و) for older Adobe software.</p>
+    </a>
+  </div>
+
   <section class="seo-section">
-    <h2>Fast &amp; Free InPage to Unicode Urdu Converter</h2>
-    <p>This online tool converts proprietary InPage Urdu text into standard UTF-8 Unicode Urdu for websites, Facebook, WhatsApp, YouTube thumbnails, and MS Word—and converts Unicode Urdu back into InPage format instantly in your browser.</p>
+    <h2>Free Online InPage to Unicode &amp; Unicode to InPage Converter</h2>
+    <p>This free utility converts proprietary InPage Urdu documents into standard UTF-8 Unicode Urdu for websites, social media, MS Word, and video editors—and converts Unicode Urdu back into InPage format instantly in your browser.</p>
 
-    <h3>How to Convert InPage Text to Unicode?</h3>
-    <p>Open your file in InPage, select the text using Ctrl+A, copy it with Ctrl+C, and paste it into the left box above. Your clean Unicode Urdu text will appear immediately in Nastaliq font.</p>
+    <h3>How to Convert InPage Files or Text to Unicode?</h3>
+    <p>Copy your Urdu text directly from InPage and paste it into the input box above, or click <strong>Upload .TXT / .INP</strong> to load a file from your computer. Your converted Nastaliq Urdu appears immediately with zero page reloads.</p>
 
-    <h3>Why Use This Converter?</h3>
-    <p>Unlike older converters, this tool runs 100% locally in your browser with zero page reloads, works smoothly on mobile phones, and includes built-in space cleaning and Urdu numeral conversion.</p>
+    <h3>Built-In Urdu Productivity Features</h3>
+    <p>Clean extra spaces after Urdu punctuation, convert English digits (123) into Urdu numerals (۱۲۳), check exact word counts, and download your converted text as a UTF-8 file.</p>
   </section>
 </div>
 
 <footer>
-  &copy; 2026 Urdu Unicode Converter Tool. Free Online Utility.
+  &copy; 2026 Urdu Unicode Converter (urdu-converter.pages.dev). Free Online Urdu Tools.
 </footer>
 
 <script>
@@ -252,7 +311,10 @@
     '\u00A9': 'ؤ', '\u00AA': 'ئ', '\u00AB': 'ۃ', '\u00AC': '۔', '\u00AD': '،',
     '\u00AE': '؛', '\u00AF': '؟', '\u00B0': '۰', '\u00B1': '۱', '\u00B2': '۲',
     '\u00B3': '۳', '\u00B4': '۴', '\u00B5': '۵', '\u00B6': '۶', '\u00B7': '۷',
-    '\u00B8': '۸', '\u00B9': '۹'
+    '\u00B8': '۸', '\u00B9': '۹', '\u00BA': 'َ', '\u00BB': 'ِ', '\u00BC': 'ُ',
+    '\u00BD': 'ّ', '\u00BE': 'ْ', '\u00BF': 'ً', '\u00C0': 'ٍ', '\u00C1': 'ٌ',
+    '\u00C2': 'ٰ', '\u00C3': 'ٔ', '\u00C4': 'ﷲ', '\u00C5': 'ﷺ', '\u00C6': 'ؑ',
+    '\u00C7': 'ؒ', '\u00C8': 'ؓ'
   };
 
   const unicodeToInpageMap = {};
@@ -301,6 +363,17 @@
     updateStats(result, 'outputStats');
   }
 
+  function handleFile(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('inputText').value = e.target.result;
+      convertText();
+    };
+    reader.readAsText(file, 'utf-8');
+  }
+
   function updateStats(text, elementId) {
     const trimmed = text.trim();
     const words = trimmed ? trimmed.split(/\s+/).length : 0;
@@ -346,6 +419,5 @@
     updateStats('', 'outputStats');
   }
 </script>
-
 </body>
 </html>
