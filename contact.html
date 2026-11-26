@@ -3,83 +3,154 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | Urdu Unicode &amp; InPage Converter</title>
-  <meta name="description" content="Contact the team behind Urdu Unicode Converter (urdu-converter.pages.dev) for feedback, bug reports, or new Urdu tool requests." />
+  <title>Contact Us &amp; Urdu Composing Services | Urdu Converter</title>
+  <meta name="description" content="Contact Urdu Converter for tool feedback, bug reports, or hire us for professional Urdu composing, InPage typing, and graphic design services." />
   <link rel="canonical" href="https://urdu-converter.pages.dev/contact.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    
-    :root { --primary: #0f766e; --primary-hover: #115e59; --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #64748b; --border: #cbd5e1; }
+    :root {
+      --primary: #0f766e;
+      --primary-hover: #115e59;
+      --whatsapp: #16a34a;
+      --whatsapp-hover: #15803d;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --border: #cbd5e1;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
-    header { background: var(--primary); color: #fff; padding: 1.25rem 1rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: var(--primary); color: #fff; padding: 1.25rem 1rem; text-align: center; }
     header h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
-    .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem; opacity: 0.95; }
-    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 0.85rem; }
-    .nav-links a { color: #fff; text-decoration: none; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; background: rgba(255,255,255,0.15); transition: 0.2s; }
-    .nav-links a:hover, .nav-links a.active { background: #fff; color: var(--primary); }
-    .container { max-width: 1000px; margin: 1.5rem auto; padding: 0 1rem; }
-    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.04); margin-bottom: 1.5rem; }
-    h2 { color: var(--primary); font-size: 1.3rem; margin-bottom: 0.75rem; }
-    h3 { font-size: 1.05rem; margin: 1.1rem 0 0.4rem; color: var(--text); }
-    p, li { color: #334155; font-size: 0.95rem; margin-bottom: 0.65rem; }
-    ul { margin-left: 1.25rem; margin-bottom: 0.75rem; }
-    footer { text-align: center; padding: 1.5rem 1rem; color: var(--muted); font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid var(--border); }
-
-    input, textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 0.9rem; font-family: inherit; font-size: 0.95rem; }
-    label { display: block; font-weight: 600; font-size: 0.9rem; margin-bottom: 0.3rem; }
-    button { padding: 0.75rem 1.4rem; background: var(--primary); color: #fff; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; }
-    button:hover { background: var(--primary-hover); }
+    header p { font-size: 0.95rem; opacity: 0.95; }
+    .nav-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 0.85rem; }
+    .nav-link { color: #fff; text-decoration: none; background: rgba(255,255,255,0.16); padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
+    .nav-link:hover { background: rgba(255,255,255,0.28); }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; }
+    .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 1.5rem; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+    .card h2 { font-size: 1.2rem; color: var(--primary); margin-bottom: 0.5rem; }
+    .card p { font-size: 0.92rem; color: #334155; margin-bottom: 1rem; }
+    label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; color: var(--text); }
+    input, select, textarea { width: 100%; padding: 0.65rem 0.8rem; border: 1px solid var(--border); border-radius: 8px; font-family: inherit; font-size: 0.92rem; margin-bottom: 0.9rem; outline: none; }
+    input:focus, select:focus, textarea:focus { border-color: var(--primary); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+    .btn { flex: 1; min-width: 150px; padding: 0.7rem 1rem; border: none; border-radius: 8px; font-weight: 600; font-size: 0.9rem; cursor: pointer; text-align: center; color: #fff; transition: 0.2s; }
+    .btn-wa { background: var(--whatsapp); }
+    .btn-wa:hover { background: var(--whatsapp-hover); }
+    .btn-email { background: var(--primary); }
+    .btn-email:hover { background: var(--primary-hover); }
+    .service-list { list-style: none; margin: 0.75rem 0 1.25rem; }
+    .service-list li { padding: 0.45rem 0; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; color: #1e293b; }
+    .service-list li:last-child { border-bottom: none; }
+    .badge { display: inline-block; background: #ccfbf1; color: #0f766e; font-size: 0.78rem; font-weight: 700; padding: 0.25rem 0.6rem; border-radius: 999px; margin-bottom: 0.6rem; }
+    footer { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid var(--border); }
+    footer a { color: var(--primary); text-decoration: none; margin: 0 0.4rem; }
   </style>
 </head>
 <body>
+
 <header>
-  <h1>Contact Us</h1>
-  <p class="urdu-title">ہم سے رابطہ کریں</p>
-    <nav class="nav-links">
-    <a href="index.html">InPage ↔ Unicode</a>
-    <a href="urdu-png.html">Urdu Text to PNG</a>
-    <a href="photoshop-urdu.html">Photoshop Urdu Fixer</a>
-    <a href="shayari-maker.html" class="active-shayari">Shayari Card Maker</a>
+  <h1>Contact Us &amp; Urdu Services</h1>
+  <p>Feedback, Bug Reports, or Professional Urdu Composing &amp; Design</p>
+  <nav class="nav-bar">
+    <a class="nav-link" href="index.html">← Back to Urdu Converter</a>
+    <a class="nav-link" href="about.html">About Us</a>
+    <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
   </nav>
 </header>
+
 <div class="container">
-  <div class="card">
-    <h2>Send Feedback or Request a New Urdu Tool</h2>
-    <p>Have a suggestion for a new Urdu productivity tool, found a character mapping issue, or want to inquire about advertising? Fill out the form below to prepare your message.</p>
-    <form onsubmit="sendMail(event)">
-      <label>Your Name:</label>
-      <input type="text" id="senderName" required placeholder="Enter your name" />
-      <label>Your Email:</label>
-      <input type="email" id="senderEmail" required placeholder="you@example.com" />
-      <label>Message:</label>
-      <textarea id="senderMsg" rows="5" required placeholder="Write your feedback or tool request here..."></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p id="formStatus" style="margin-top:0.85rem; color: var(--primary); font-weight: 600;"></p>
+  <div class="grid">
+    <!-- Interactive Contact & Service Inquiry Form -->
+    <div class="card">
+      <h2>Send a Message or Request a Quote</h2>
+      <p>Have a suggestion for a new Urdu tool, found a character issue, or need bulk Urdu typing? Fill out the form below to message us directly on WhatsApp or Email.</p>
+
+      <label for="userName">Your Name</label>
+      <input type="text" id="userName" placeholder="e.g. Ali Raza" />
+
+      <label for="topic">Subject / Service Needed</label>
+      <select id="topic">
+        <option value="Tool Feedback / Bug Report">Tool Feedback / Bug Report</option>
+        <option value="Bulk Urdu InPage / Unicode Composing">Bulk Urdu InPage / Unicode Composing</option>
+        <option value="Book Formatting &amp; Publishing Layout">Book Formatting &amp; Publishing Layout</option>
+        <option value="Urdu YouTube Thumbnails &amp; Social Posts">Urdu YouTube Thumbnails &amp; Social Posts</option>
+        <option value="Advertising / Sponsorship Inquiry">Advertising / Sponsorship Inquiry</option>
+      </select>
+
+      <label for="message">Your Message or Project Details</label>
+      <textarea id="message" rows="4" placeholder="Write your message, page count, or tool suggestion here..."></textarea>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-wa" onclick="sendWhatsApp()">Send via WhatsApp</button>
+        <button type="button" class="btn btn-email" onclick="sendEmail()">Send via Email</button>
+      </div>
+    </div>
+
+    <!-- Freelance Services Card -->
+    <div class="card">
+      <span class="badge">Available for Freelance Work</span>
+      <h2>Professional Urdu Composing &amp; Design</h2>
+      <p>Need fast, accurate Urdu work done manually by an expert? We offer reliable turnaround for publishers, students, and content creators:</p>
+      <ul class="service-list">
+        <li>✓ <strong>InPage &amp; Unicode Typing:</strong> Books, thesis papers, exam papers, and legal documents.</li>
+        <li>✓ <strong>PDF / Image to Editable Urdu:</strong> Accurate re-typing from scanned books or handwritten notes.</li>
+        <li>✓ <strong>Adobe Photoshop &amp; CorelDRAW Urdu:</strong> Brochures, flex banners, and wedding cards.</li>
+        <li>✓ <strong>YouTube Thumbnails &amp; Poetry Cards:</strong> High-impact Nastaliq typography designs.</li>
+      </ul>
+      <p style="font-size: 0.85rem; color: var(--muted);">Response time: Usually within a few hours during business hours (PKT).</p>
+    </div>
   </div>
 </div>
+
 <footer>
-  <div style="margin-bottom: 0.6rem;">
-    <a href="index.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Home</a> |
-    <a href="urdu-png.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Text to PNG</a> |
-    <a href="photoshop-urdu.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Photoshop Fixer</a> |
-    <a href="shayari-maker.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Shayari Maker</a> |
-    <a href="about.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">About Us</a> |
-    <a href="privacy-policy.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Privacy Policy</a> |
-    <a href="contact.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Contact</a>
-  </div>
-  &copy; 2026 Urdu Unicode Converter (urdu-converter.pages.dev). Free Online Urdu Productivity Tools.
+  <a href="index.html">Home</a> ·
+  <a href="about.html">About Us</a> ·
+  <a href="privacy-policy.html">Privacy Policy</a> ·
+  <a href="contact.html">Contact Us</a>
+  <div style="margin-top: 0.5rem;">&copy; 2026 Urdu Converter &amp; Publishing Toolkit. All rights reserved.</div>
 </footer>
+
 <script>
-  function sendMail(e) {
-    e.preventDefault();
-    const name = document.getElementById('senderName').value;
-    const email = document.getElementById('senderEmail').value;
-    const msg = document.getElementById('senderMsg').value;
-    document.getElementById('formStatus').textContent = 'Thank you, ' + name + '! Your feedback has been recorded.';
-    e.target.reset();
+  // Replace with your real WhatsApp number (country code + number, no + or leading 0)
+  const WHATSAPP_NUMBER = "923455299282";
+  // Replace with your real contact email address
+  const CONTACT_EMAIL = "your-email@example.com";
+
+  function sendWhatsApp() {
+    const name = document.getElementById("userName").value.trim() || "Visitor";
+    const topic = document.getElementById("topic").value;
+    const msg = document.getElementById("message").value.trim();
+    if (!msg) {
+      alert("Please enter your message first.");
+      return;
+    }
+    const text = `Assalam-o-Alaikum!%0A*Name:* ${encodeURIComponent(name)}%0A*Topic:* ${encodeURIComponent(topic)}%0A*Message:* ${encodeURIComponent(msg)}`;
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
+  }
+
+  function sendEmail() {
+    const name = document.getElementById("userName").value.trim() || "Visitor";
+    const topic = document.getElementById("topic").value;
+    const msg = document.getElementById("message").value.trim();
+    if (!msg) {
+      alert("Please enter your message first.");
+      return;
+    }
+    const subject = encodeURIComponent(`[Urdu Converter] ${topic} - ${name}`);
+    const body = encodeURIComponent(`Name: ${name}
+Topic: ${topic}
+
+Message:
+${msg}`);
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   }
 </script>
+
 </body>
 </html>
