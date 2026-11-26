@@ -3,239 +3,167 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fix Broken Urdu in Photoshop &amp; Premiere Online | فوٹوشاپ اردو فکسر</title>
-  <meta name="description" content="Fix disconnected backward Urdu letters (ا ر د و) in older Adobe Photoshop, Illustrator, and Premiere Pro versions instantly online for free." />
-  <meta name="keywords" content="Fix broken Urdu in Photoshop, Urdu disconnected letters fix, Premiere Pro Urdu text fixer, فوٹوشاپ اردو مسئلہ حل" />
+  <title>Fix Broken Urdu Text in Photoshop &amp; Premiere Online Free</title>
+  <meta name="description" content="Fix disconnected and backward Urdu letters in Adobe Photoshop, Premiere Pro, Illustrator, and CorelDRAW instantly online for free." />
   <link rel="canonical" href="https://urdu-converter.pages.dev/photoshop-urdu.html" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --primary: #0f766e;
-      --primary-hover: #115e59;
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --border: #cbd5e1;
-    }
+    :root { --primary: #0f766e; --primary-hover: #115e59; --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #64748b; --border: #cbd5e1; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    header {
-      background: var(--primary);
-      color: #fff;
-      padding: 1.25rem 1rem 0.9rem;
-      text-align: center;
-    }
-    header h1 { font-size: 1.55rem; margin-bottom: 0.25rem; }
-    .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem; }
-
-    nav {
-      background: #115e59;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 0.5rem;
-      padding: 0.6rem 1rem;
-    }
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      padding: 0.45rem 0.9rem;
-      border-radius: 6px;
-      transition: 0.2s;
-    }
-    nav a:hover, nav a.active {
-      background: #ffffff;
-      color: #0f766e;
-    }
-
-    .container {
-      max-width: 1050px;
-      margin: 1.5rem auto;
-      padding: 0 1rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-    }
-    @media (max-width: 768px) {
-      .grid { grid-template-columns: 1fr; }
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-    }
-    textarea {
-      width: 100%;
-      height: 220px;
-      padding: 0.85rem;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      outline: none;
-    }
-    .urdu-font {
-      font-family: 'Noto Nastaliq Urdu', serif;
-      line-height: 2.2;
-    }
-    .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      border: none;
-      padding: 0.65rem 1.2rem;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-      margin-top: 0.75rem;
-    }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    header { background: var(--primary); color: #fff; padding: 1.1rem 1rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    header h1 { font-size: 1.45rem; margin-bottom: 0.2rem; }
+    .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.15rem; opacity: 0.95; }
+    .nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 0.85rem; }
+    .nav a { color: #fff; text-decoration: none; font-size: 0.85rem; font-weight: 600; padding: 0.4rem 0.85rem; border-radius: 6px; background: rgba(255,255,255,0.14); transition: 0.2s; }
+    .nav a:hover, .nav a.active { background: #fff; color: var(--primary); }
+    .container { max-width: 1100px; margin: 1.5rem auto; padding: 0 1rem; }
+    .box-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.15rem; box-shadow: 0 2px 6px rgba(0,0,0,0.04); display: flex; flex-direction: column; }
+    .btn { padding: 0.55rem 0.95rem; border: none; border-radius: 6px; font-weight: 600; font-size: 0.85rem; cursor: pointer; background: #e2e8f0; color: var(--text); transition: 0.2s; }
+    .btn:hover { background: #cbd5e1; }
+    .btn-primary { background: var(--primary); color: #fff; }
     .btn-primary:hover { background: var(--primary-hover); }
-    .seo-section { margin-top: 1.5rem; }
-    .seo-section h2 { color: var(--primary); font-size: 1.2rem; margin-bottom: 0.5rem; }
-    .seo-section p { color: #334155; font-size: 0.95rem; margin-bottom: 0.6rem; }
-    footer { text-align: center; padding: 1.5rem; color: var(--muted); font-size: 0.85rem; }
+    .seo-section { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-top: 2rem; }
+    .seo-section h2 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--primary); }
+    .seo-section h3 { font-size: 1.05rem; margin: 1rem 0 0.35rem; }
+    .seo-section p { color: #334155; font-size: 0.95rem; }
+    footer { text-align: center; padding: 1.5rem 1rem; color: var(--muted); font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid var(--border); }
+    .footer-links { margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--primary); text-decoration: none; font-weight: 600; margin: 0 0.35rem; }
+    .footer-links a:hover { text-decoration: underline; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    textarea { width: 100%; height: 220px; padding: 0.85rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1.2rem; line-height: 2; outline: none; }
+    .urdu-font { font-family: 'Noto Nastaliq Urdu', serif; }
   </style>
 </head>
 <body>
-
 <header>
-  <h1>Broken Urdu Fixer for Photoshop &amp; Premiere</h1>
+  <h1>Broken Urdu Box Fixer (Photoshop &amp; Premiere)</h1>
   <p class="urdu-title">فوٹوشاپ اور پریمیئر میں ٹوٹے ہوئے اردو الفاظ درست کریں</p>
+  <nav class="nav">
+    <a href="index.html">InPage ↔ Unicode</a>
+    <a href="urdu-png.html">Urdu Text to PNG</a>
+    <a href="photoshop-urdu.html" class="active">Photoshop Urdu Fixer</a>
+    <a href="shayari-maker.html">Shayari Card Maker</a>
+  </nav>
 </header>
-
-<nav>
-  <a href="/" class="">InPage ↔ Unicode</a>
-  <a href="/urdu-png.html" class="">Urdu Text to PNG</a>
-  <a href="/photoshop-urdu.html" class="active">Photoshop Urdu Fixer</a>
-</nav>
-
 
 <div class="container">
   <div class="grid">
-    <div class="card">
-      <strong>1. Paste Normal Unicode Urdu Here:</strong>
-      <textarea id="normalUrdu" class="urdu-font" dir="rtl" placeholder="یہاں اردو تحریر پیسٹ کریں..." oninput="fixForAdobe()"></textarea>
+    <div class="box-card">
+      <div style="font-weight:600; margin-bottom:0.5rem;">1. Paste Standard Unicode Urdu Here:</div>
+      <textarea id="srcText" class="urdu-font" dir="rtl" placeholder="یہاں اردو لکھیں یا پیسٹ کریں..." oninput="fixUrdu()"></textarea>
     </div>
-    <div class="card">
-      <div style="display:flex; justify-content:space-between; align-items:center;">
-        <strong>2. Copy Fixed Text for Photoshop:</strong>
-        <span id="statusMsg" style="color:var(--primary); font-size:0.85rem;"></span>
+
+    <div class="box-card">
+      <div style="display:flex; justify-content:space-between; margin-bottom:0.5rem; font-weight:600;">
+        <span>2. Copy Fixed Text for Photoshop / Premiere:</span>
+        <span id="status" style="color:var(--primary);"></span>
       </div>
-      <textarea id="fixedUrdu" dir="ltr" readonly placeholder="Converted glyph output will appear here..."></textarea>
-      <button class="btn-primary" onclick="copyFixed()">Copy for Photoshop / Premiere</button>
+      <textarea id="fixedText" readonly placeholder="Fixed glyphs will appear here..."></textarea>
+      <button class="btn btn-primary" style="margin-top:0.75rem;" onclick="copyFixed()">Copy Fixed Urdu</button>
     </div>
   </div>
 
-  <div class="card seo-section">
-    <h2>Why Does Urdu Appear Backwards &amp; Disconnected in Photoshop?</h2>
-    <p>Older versions of Adobe Photoshop, Illustrator, Premiere Pro, and After Effects lack Right-to-Left (RTL) shaping engines, turning connected Urdu words into separate backwards letters (such as <strong>ا ر د و</strong>).</p>
-    <p>This tool reshapes each Urdu letter into its proper Arabic Presentation Form glyph and reverses line order so when you paste it into Photoshop and select a Nastaliq font, it renders properly connected.</p>
-  </div>
+  <section class="seo-section">
+    <h2>Why Does Urdu Appear Disconnected &amp; Backward in Adobe Software?</h2>
+    <p>Older versions of Adobe Photoshop, Illustrator, and Premiere Pro lack Middle Eastern RTL text shaping, turning connected Urdu words into separate backward letters. Paste your Urdu text above to reshape every letter into its proper contextual glyph and reverse line direction so it pastes cleanly.</p>
+  </section>
 </div>
 
 <footer>
-  &copy; 2026 Urdu Unicode Converter (urdu-converter.pages.dev). Free Online Urdu Tools.
+  <div class="footer-links">
+    <a href="index.html">Home</a> |
+    <a href="about.html">About Us</a> |
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="contact.html">Contact Us</a>
+  </div>
+  &copy; 2026 Urdu Unicode Converter Tool (urdu-converter.pages.dev). Free Online Utility.
 </footer>
 
 <script>
-  const nonJoiners = new Set(['ا','آ','أ','إ','د','ڈ','ذ','ر','ڑ','ز','ژ','و','ؤ','ے','ہ','ۃ','ء']);
-
-  // [isolated, final, initial, medial]
   const forms = {
-    'ا': ['\uFE8D','\uFE8E','\uFE8D','\uFE8E'],
-    'آ': ['\uFE81','\uFE82','\uFE81','\uFE82'],
-    'ب': ['\uFE8F','\uFE90','\uFE91','\uFE92'],
-    'پ': ['\uFB56','\uFB57','\uFB58','\uFB59'],
-    'ت': ['\uFE95','\uFE96','\uFE97','\uFE98'],
-    'ٹ': ['\uFB66','\uFB67','\uFB68','\uFB69'],
-    'ث': ['\uFE99','\uFE9A','\uFE9B','\uFE9C'],
-    'ج': ['\uFE9D','\uFE9E','\uFE9F','\uFEA0'],
-    'چ': ['\uFB7A','\uFB7B','\uFB7C','\uFB7D'],
-    'ح': ['\uFEA1','\uFEA2','\uFEA3','\uFEA4'],
-    'خ': ['\uFEA5','\uFEA6','\uFEA7','\uFEA8'],
-    'د': ['\uFEA9','\uFEAA','\uFEA9','\uFEAA'],
-    'ڈ': ['\uFB88','\uFB89','\uFB88','\uFB89'],
-    'ذ': ['\uFEAB','\uFEAC','\uFEAB','\uFEAC'],
-    'ر': ['\uFEAD','\uFEAE','\uFEAD','\uFEAE'],
-    'ڑ': ['\uFB8C','\uFB8D','\uFB8C','\uFB8D'],
-    'ز': ['\uFEAF','\uFEB0','\uFEAF','\uFEB0'],
-    'ژ': ['\uFB8A','\uFB8B','\uFB8A','\uFB8B'],
-    'س': ['\uFEB1','\uFEB2','\uFEB3','\uFEB4'],
-    'ش': ['\uFEB5','\uFEB6','\uFEB7','\uFEB8'],
-    'ص': ['\uFEB9','\uFEBA','\uFEBB','\uFEBC'],
-    'ض': ['\uFEBD','\uFEBE','\uFEBF','\uFEC0'],
-    'ط': ['\uFEC1','\uFEC2','\uFEC3','\uFEC4'],
-    'ظ': ['\uFEC5','\uFEC6','\uFEC7','\uFEC8'],
-    'ع': ['\uFEC9','\uFECA','\uFECB','\uFECC'],
-    'غ': ['\uFECD','\uFECE','\uFECF','\uFED0'],
-    'ف': ['\uFED1','\uFED2','\uFED3','\uFED4'],
-    'ق': ['\uFED5','\uFED6','\uFED7','\uFED8'],
-    'ک': ['\uFB8E','\uFB8F','\uFB90','\uFB91'],
-    'گ': ['\uFB92','\uFB93','\uFB94','\uFB95'],
-    'ل': ['\uFEDD','\uFEDE','\uFEDF','\uFEE0'],
-    'م': ['\uFEE1','\uFEE2','\uFEE3','\uFEE4'],
-    'ن': ['\uFEE5','\uFEE6','\uFEE7','\uFEE8'],
-    'ں': ['\uFB9E','\uFB9F','\uFB9E','\uFB9F'],
-    'و': ['\uFEED','\uFEEE','\uFEED','\uFEEE'],
-    'ہ': ['\uFBA6','\uFBA7','\uFBA8','\uFBA9'],
-    'ھ': ['\uFBAA','\uFBAB','\uFBAC','\uFBAD'],
-    'ی': ['\uFBFC','\uFBFD','\uFBFE','\uFBFF'],
-    'ے': ['\uFBAE','\uFBAF','\uFBAE','\uFBAF'],
-    'ئ': ['\uFE89','\uFE8A','\uFE8B','\uFE8C']
+    'ا': ['\uFE8D', '\uFE8E', '\uFE8D', '\uFE8E'],
+    'آ': ['\uFE81', '\uFE82', '\uFE81', '\uFE82'],
+    'ب': ['\uFE8F', '\uFE90', '\uFE91', '\uFE92'],
+    'پ': ['\uFB56', '\uFB57', '\uFB58', '\uFB59'],
+    'ت': ['\uFE95', '\uFE96', '\uFE97', '\uFE98'],
+    'ٹ': ['\uFB66', '\uFB67', '\uFB68', '\uFB69'],
+    'ث': ['\uFE99', '\uFE9A', '\uFE9B', '\uFE9C'],
+    'ج': ['\uFE9D', '\uFE9E', '\uFE9F', '\uFEA0'],
+    'چ': ['\uFB7A', '\uFB7B', '\uFB7C', '\uFB7D'],
+    'ح': ['\uFEA1', '\uFEA2', '\uFEA3', '\uFEA4'],
+    'خ': ['\uFEA5', '\uFEA6', '\uFEA7', '\uFEA8'],
+    'د': ['\uFEA9', '\uFEAA', '\uFEA9', '\uFEAA'],
+    'ڈ': ['\uFB88', '\uFB89', '\uFB88', '\uFB89'],
+    'ذ': ['\uFEAB', '\uFEAC', '\uFEAB', '\uFEAC'],
+    'ر': ['\uFEAD', '\uFEAE', '\uFEAD', '\uFEAE'],
+    'ڑ': ['\uFB8C', '\uFB8D', '\uFB8C', '\uFB8D'],
+    'ز': ['\uFEAF', '\uFEB0', '\uFEAF', '\uFEB0'],
+    'ژ': ['\uFB8A', '\uFB8B', '\uFB8A', '\uFB8B'],
+    'س': ['\uFEB1', '\uFEB2', '\uFEB3', '\uFEB4'],
+    'ش': ['\uFEB5', '\uFEB6', '\uFEB7', '\uFEB8'],
+    'ص': ['\uFEB9', '\uFEBA', '\uFEBB', '\uFEBC'],
+    'ض': ['\uFEBD', '\uFEBE', '\uFEBF', '\uFEC0'],
+    'ط': ['\uFEC1', '\uFEC2', '\uFEC3', '\uFEC4'],
+    'ظ': ['\uFEC5', '\uFEC6', '\uFEC7', '\uFEC8'],
+    'ع': ['\uFEC9', '\uFECA', '\uFECB', '\uFECC'],
+    'غ': ['\uFECD', '\uFECE', '\uFECF', '\uFED0'],
+    'ف': ['\uFED1', '\uFED2', '\uFED3', '\uFED4'],
+    'ق': ['\uFED5', '\uFED6', '\uFED7', '\uFED8'],
+    'ک': ['\uFB8E', '\uFB8F', '\uFB90', '\uFB91'],
+    'گ': ['\uFB92', '\uFB93', '\uFB94', '\uFB95'],
+    'ل': ['\uFEDD', '\uFEDE', '\uFEDF', '\uFEE0'],
+    'م': ['\uFEE1', '\uFEE2', '\uFEE3', '\uFEE4'],
+    'ن': ['\uFEE5', '\uFEE6', '\uFEE7', '\uFEE8'],
+    'ں': ['\uFB9E', '\uFB9F', '\uFB9E', '\uFB9F'],
+    'و': ['\uFEED', '\uFEEE', '\uFEED', '\uFEEE'],
+    'ہ': ['\uFBA6', '\uFBA7', '\uFBA8', '\uFBA9'],
+    'ھ': ['\uFBAA', '\uFBAB', '\uFBAC', '\uFBAD'],
+    'ی': ['\uFBFC', '\uFBFD', '\uFBFE', '\uFBFF'],
+    'ے': ['\uFBAE', '\uFBAF', '\uFBAE', '\uFBAF'],
+    'ئ': ['\uFE89', '\uFE8A', '\uFE8B', '\uFE8C']
   };
+  const nonJoinNext = new Set(['ا','آ','د','ڈ','ذ','ر','ڑ','ز','ژ','و','ے','ں']);
 
-  function shapeLine(line) {
-    const chars = Array.from(line);
-    const shaped = [];
+  function shapeWord(word) {
+    const chars = Array.from(word);
+    let out = [];
     for (let i = 0; i < chars.length; i++) {
-      const ch = chars[i];
-      if (!forms[ch]) {
-        shaped.push(ch);
-        continue;
-      }
+      const c = chars[i];
+      if (!forms[c]) { out.push(c); continue; }
       const prev = i > 0 ? chars[i - 1] : null;
       const next = i < chars.length - 1 ? chars[i + 1] : null;
-      const connectPrev = prev && forms[prev] && !nonJoiners.has(prev);
-      const connectNext = next && forms[next] && !nonJoiners.has(ch);
-
-      let formIdx = 0;
-      if (connectPrev && connectNext) formIdx = 3;
-      else if (connectPrev) formIdx = 1;
-      else if (connectNext) formIdx = 2;
-
-      shaped.push(forms[ch][formIdx]);
+      const connPrev = prev && forms[prev] && !nonJoinNext.has(prev);
+      const connNext = next && forms[next] && !nonJoinNext.has(c);
+      let idx = 0;
+      if (connPrev && connNext) idx = 3;
+      else if (connPrev) idx = 1;
+      else if (connNext) idx = 2;
+      out.push(forms[c][idx]);
     }
-    return shaped.reverse().join('');
+    return out.reverse().join('');
   }
 
-  function fixForAdobe() {
-    const input = document.getElementById('normalUrdu').value;
-    const lines = input.split('\n').map(shapeLine);
-    document.getElementById('fixedUrdu').value = lines.join('\n');
+  function fixUrdu() {
+    const text = document.getElementById('srcText').value;
+    const lines = text.split('\n').map(line => {
+      const tokens = line.split(/(\s+)/);
+      return tokens.reverse().map(t => /[\u0600-\u06FF]/.test(t) ? shapeWord(t) : t).join('');
+    });
+    document.getElementById('fixedText').value = lines.join('\n');
   }
 
   function copyFixed() {
-    const out = document.getElementById('fixedUrdu');
+    const out = document.getElementById('fixedText');
     if (!out.value) return;
     navigator.clipboard.writeText(out.value);
-    const msg = document.getElementById('statusMsg');
-    msg.textContent = 'Copied!';
-    setTimeout(() => msg.textContent = '', 2000);
+    const st = document.getElementById('status');
+    st.textContent = 'Copied!';
+    setTimeout(() => st.textContent = '', 2000);
   }
 </script>
 </body>
