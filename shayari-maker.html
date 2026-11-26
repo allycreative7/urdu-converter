@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urdu Shayari &amp; Poetry Card Maker Online Free | اردو شاعری کارڈ میکر</title>
+  <meta name="description" content="Create beautiful Urdu Shayari, poetry, and quote images online for free. Choose aesthetic backgrounds, add your Takhallus or name, and download high-resolution PNG cards." />
+  <link rel="canonical" href="https://urdu-converter.pages.dev/shayari-maker.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    
+    :root { --primary: #0f766e; --primary-hover: #115e59; --bg: #f8fafc; --card: #ffffff; --text: #0f172a; --muted: #64748b; --border: #cbd5e1; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    header { background: var(--primary); color: #fff; padding: 1.25rem 1rem; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    header h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .urdu-title { font-family: 'Noto Nastaliq Urdu', serif; font-size: 1.2rem; opacity: 0.95; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: 0.85rem; }
+    .nav-links a { color: #fff; text-decoration: none; padding: 0.4rem 0.85rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; background: rgba(255,255,255,0.15); transition: 0.2s; }
+    .nav-links a:hover, .nav-links a.active { background: #fff; color: var(--primary); }
+    .container { max-width: 1000px; margin: 1.5rem auto; padding: 0 1rem; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.04); margin-bottom: 1.5rem; }
+    h2 { color: var(--primary); font-size: 1.3rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.05rem; margin: 1.1rem 0 0.4rem; color: var(--text); }
+    p, li { color: #334155; font-size: 0.95rem; margin-bottom: 0.65rem; }
+    ul { margin-left: 1.25rem; margin-bottom: 0.75rem; }
+    footer { text-align: center; padding: 1.5rem 1rem; color: var(--muted); font-size: 0.85rem; margin-top: 2rem; border-top: 1px solid var(--border); }
+
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+    textarea, input[type="text"], select { width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; margin-bottom: 0.85rem; }
+    textarea { height: 150px; font-family: 'Noto Nastaliq Urdu', serif; line-height: 2.2; font-size: 1.2rem; }
+    .controls-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+    label { display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.3rem; }
+    canvas { width: 100%; max-width: 450px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.12); display: block; margin: 0 auto; }
+    .btn-primary { width: 100%; padding: 0.8rem; border: none; border-radius: 8px; background: var(--primary); color: #fff; font-weight: 700; font-size: 1rem; cursor: pointer; margin-top: 0.85rem; }
+    .btn-primary:hover { background: var(--primary-hover); }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Urdu Shayari &amp; Quote Card Maker</h1>
+  <p class="urdu-title">اردو شاعری اور اقوال کے خوبصورت کارڈ بنائیں</p>
+  <nav class="nav-links">
+    <a href="index.html">InPage ↔ Unicode</a>
+    <a href="urdu-png.html">Urdu Text to PNG</a>
+    <a href="photoshop-urdu.html">Photoshop Urdu Fixer</a>
+    <a href="shayari-maker.html" class="active">Shayari Card Maker</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="grid">
+    <div class="card">
+      <label>Write or Paste Urdu Poetry / Quote:</label>
+      <textarea id="poetryText" dir="rtl" oninput="drawCard()">ستاروں سے آگے جہاں اور بھی ہیں
+ابھی عشق کے امتحاں اور بھی ہیں</textarea>
+
+      <label>Poet Name / Takhallus (Optional):</label>
+      <input type="text" id="poetName" dir="rtl" value="— علامہ اقبال" oninput="drawCard()" />
+
+      <div class="controls-row">
+        <div>
+          <label>Card Theme:</label>
+          <select id="themeSelect" onchange="drawCard()">
+            <option value="emerald">Royal Emerald Dark</option>
+            <option value="midnight">Midnight Gold</option>
+            <option value="paper">Classic Warm Paper</option>
+            <option value="sunset">Crimson Twilight</option>
+          </select>
+        </div>
+        <div>
+          <label>Font Size (<span id="sizeVal">44</span>px):</label>
+          <input type="range" id="fontSize" min="26" max="68" value="44" style="width:100%; margin-top:0.5rem;" oninput="drawCard()" />
+        </div>
+      </div>
+
+      <button class="btn-primary" onclick="downloadCard()">Download Shayari Card (PNG)</button>
+    </div>
+
+    <div class="card" style="text-align:center;">
+      <label style="margin-bottom:0.75rem;">Live Instagram / WhatsApp Preview (1080×1080):</label>
+      <canvas id="cardCanvas" width="1080" height="1080"></canvas>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Create Aesthetic Urdu Poetry Images in Seconds</h2>
+    <p>Design shareable Urdu Shayari, Islamic quotes, and literary posts for Instagram, Facebook, and WhatsApp status without installing heavy graphic design software. All rendering happens locally inside your browser for instant high-resolution downloads.</p>
+  </div>
+</div>
+
+<footer>
+  <div style="margin-bottom: 0.6rem;">
+    <a href="index.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Home</a> |
+    <a href="urdu-png.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Text to PNG</a> |
+    <a href="photoshop-urdu.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Photoshop Fixer</a> |
+    <a href="shayari-maker.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Shayari Maker</a> |
+    <a href="about.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">About Us</a> |
+    <a href="privacy-policy.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Privacy Policy</a> |
+    <a href="contact.html" style="color: #0f766e; text-decoration: none; margin: 0 0.5rem;">Contact</a>
+  </div>
+  &copy; 2026 Urdu Unicode Converter (urdu-converter.pages.dev). Free Online Urdu Productivity Tools.
+</footer>
+
+<script>
+  const themes = {
+    emerald: { bg1: '#064e3b', bg2: '#022c22', text: '#ffffff', accent: '#6ee7b7', border: '#10b981' },
+    midnight: { bg1: '#1e293b', bg2: '#0f172a', text: '#f8fafc', accent: '#fbbf24', border: '#f59e0b' },
+    paper: { bg1: '#fef3c7', bg2: '#fde68a', text: '#1e293b', accent: '#92400e', border: '#d97706' },
+    sunset: { bg1: '#4c0519', bg2: '#1f040d', text: '#fff1f2', accent: '#fda4af', border: '#f43f5e' }
+  };
+
+  function drawCard() {
+    const canvas = document.getElementById('cardCanvas');
+    const ctx = canvas.getContext('2d');
+    const text = document.getElementById('poetryText').value;
+    const poet = document.getElementById('poetName').value;
+    const theme = themes[document.getElementById('themeSelect').value];
+    const size = parseInt(document.getElementById('fontSize').value, 10);
+    document.getElementById('sizeVal').textContent = size;
+
+    const grad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    grad.addColorStop(0, theme.bg1);
+    grad.addColorStop(1, theme.bg2);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    // Decorative inner border
+    ctx.strokeStyle = theme.border;
+    ctx.lineWidth = 4;
+    ctx.strokeRect(55, 55, canvas.width - 110, canvas.height - 110);
+
+    // Poetry lines
+    const lines = text.split('\n');
+    const lineHeight = size * 2.2;
+    ctx.font = `700 ${size}px "Noto Nastaliq Urdu", serif`;
+    ctx.fillStyle = theme.text;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    const totalHeight = lines.length * lineHeight;
+    let startY = (canvas.height - totalHeight) / 2 + lineHeight / 2 - (poet ? 30 : 0);
+
+    lines.forEach((line, idx) => {
+      ctx.fillText(line, canvas.width / 2, startY + idx * lineHeight);
+    });
+
+    if (poet.trim()) {
+      ctx.font = `400 ${Math.round(size * 0.65)}px "Noto Nastaliq Urdu", serif`;
+      ctx.fillStyle = theme.accent;
+      ctx.fillText(poet, canvas.width / 2, startY + lines.length * lineHeight + 35);
+    }
+  }
+
+  function downloadCard() {
+    const link = document.createElement('a');
+    link.download = 'urdu-shayari-card.png';
+    link.href = document.getElementById('cardCanvas').toDataURL('image/png');
+    link.click();
+  }
+
+  document.fonts.ready.then(drawCard);
+  window.onload = drawCard;
+</script>
+</body>
+</html>
